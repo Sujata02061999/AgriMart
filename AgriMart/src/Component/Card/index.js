@@ -1,25 +1,26 @@
 import React from "react";
 import "./index.css";
-import cardImg from "../../Assets/fruits.jpg";
-export default function BaseCard() {
+
+
+
+export default function BaseCard({product}) {
   return (
-    <div>
-      <div className="card">
+    
+      <div className="card" key={product.id}>
         <div className="card-img">
-          <img src={cardImg} alt="img" />
+          <img src={product.image} alt="img" />
         </div>
         <div className="card-title">
-          <h3>Fruits</h3>
+          <h3>{product.title}</h3>
         </div>
         <div className="card-disc">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit aperiam eum, totam officiis laboriosam facere aut fuga eos atque illo aliquid dolores. Quae dignissimos cum aliquam sapiente, quisquam asperiores tempora.
-          orem ipsum dolor, sit amet consectetur adipisicing elit. Velit aperiam eum, totam officiis laboriosam facere aut fuga eos atque illo aliquid dolores. Quae dignissimos cum aliquam sapiente, quisquam asperiores tempora
+          <p>{product.content}
           </p>
         </div>
         <div className="card-btn">
           <button>Explore More</button>
         </div>
       </div>
-    </div>
+    
   );
 }

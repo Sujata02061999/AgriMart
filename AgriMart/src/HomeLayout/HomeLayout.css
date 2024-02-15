@@ -1,0 +1,10 @@
+.homelayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto);
+  grid-column-gap: 11px;
+  grid-row-gap: 15px;
+}
+.banner_home{
+    margin-top: 60px;
+}
